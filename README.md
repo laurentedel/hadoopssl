@@ -81,7 +81,6 @@ Create CA should only be done once and this can be used for signing host specifi
 
 **Step 14**: Copy the jks files in the respective locations (Repeat this step on all hosts): 
 
-      #cp all.jks /etc/security/clientKeys/
       #cp <hostname>.jks /etc/security/clientKeys/keystore.jks
       #chmod 440 /etc/security/clientKeys/keystore.jks
       #cp truststore.jks /etc/security/clientKeys/truststore.jks
