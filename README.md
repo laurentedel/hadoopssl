@@ -70,7 +70,6 @@ Create CA should only be done once and this can be used for signing host specifi
 **Step 11**: Create a common truststore (as we have signed with CA cert we only need the CA cert in truststore): 
 
     #keytool -import -keystore truststore.jks -alias rootca -file /root/CA/certs/ca.crt
-    #cp truststore.jks all.jks 
 
 #### Distribute keystore and truststore to all hosts :
 
@@ -121,7 +120,7 @@ From Ambari Set below properties in referred config files(From Filter search for
 
     ssl.client.keystore.location: /etc/security/clientKeys/keystore.jks
     ssl.client.keystore.password: <keystorePassword>
-    ssl.client.truststore.location: /etc/security/clientKeys/all.jks
+    ssl.client.truststore.location: /etc/security/clientKeys/truststore.jks
     ssl.client.truststore.password: <TrustStorePassword>
 
 *hdfs-site.xml*
