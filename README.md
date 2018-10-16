@@ -69,7 +69,7 @@ Create CA should only be done once and this can be used for signing host specifi
 
 **Step 11**: Create a common truststore (as we have signed with CA cert we only need the CA cert in truststore): 
 
-    #keytool -import -keystore truststore.jks -alias rootca -file ca.crt
+    #keytool -import -keystore truststore.jks -alias rootca -file /root/CA/certs/ca.crt
     #cp truststore.jks all.jks 
 
 #### Distribute keystore and truststore to all hosts :
